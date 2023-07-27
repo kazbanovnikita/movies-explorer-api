@@ -36,7 +36,7 @@ const deleteMovie = (req, res, next) => {
         return Promise.reject(new NotAccessError('Нельзя удалять чужие данные'));
       }
       return Movie.deleteOne(movie)
-        .then(() => res.send({ massege: 'Фильм удалена' }));
+        .then(() => res.send({ massege: 'Фильм удален' }));
     })
     .catch(next);
 };
