@@ -15,7 +15,7 @@ const NotFoundError = require('../erorrs/notFoundError');
 const getCurrentUser = (req, res, next) => {
   User.findById(req.user)
     .orFail(new NotFoundError('Пользователь не найден'))
-    .then((user) => res.status(200).send(user))
+    .then((user) => res.status(STATUS_OK).send(user))
     .catch(next);
 };
 

@@ -7,6 +7,7 @@ const ERROR_NOT_UNIQUE = 409;
 const ERROR_AUTH = 401;
 const ERROR_ACCESS = 403;
 const ERROR_CODE_UNIQUE = 11000;
+const MONGO_URL = 'mongodb://127.0.0.1:27017/bitfilmsdb';
 
 module.exports = {
   JWT_SECRET,
@@ -18,4 +19,5 @@ module.exports = {
   ERROR_AUTH,
   ERROR_ACCESS,
   ERROR_CODE_UNIQUE,
+  MONGO_URL,
 };

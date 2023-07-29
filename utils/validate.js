@@ -29,7 +29,7 @@ module.exports.validateUserAuth = celebrate({
 
 module.exports.validateMovieID = celebrate({
   [Segments.PARAMS]: Joi.object().keys({
-    movieId: Joi.string().hex().required(),
+    movieId: Joi.string().length(24).hex().required(),
   }),
 });
 

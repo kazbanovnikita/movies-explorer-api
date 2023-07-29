@@ -9,14 +9,18 @@ const router = require('./routes');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const cors = require('./middlewares/cors');
 const defaultError = require('./middlewares/defaultErorr');
+const MONGO_URL = require('./utils/constants');
 
 const app = express();
 
 app.use(cors);
 app.use(helmet());
 app.use(express.json());
+app.use(helmet());
 
-mongoose.connect('mongodb://127.0.0.1:27017/bitfilmsdb');
+const { MONGO = MONGO_URL } = process.env;
+
+mongoose.connect(MONGO);
 
 app.use(requestLogger);
 
