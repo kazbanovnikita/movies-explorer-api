@@ -1,7 +1,9 @@
 // Массив доменов, с которых разрешены кросс-доменные запросы
 const allowedCors = [
   'https://localhost:3000',
-  'http://localhost:3002',
+  'http://localhost:3001',
+  'https://nik24-movie-explorer.nomoredomainsicu.ru',
+  'http://nik24-movie-explorer.nomoredomainsicu.ru'
 ];
 
 const cors = (req, res, next) => {
